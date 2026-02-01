@@ -12,11 +12,21 @@ const renderList = (el, items) => {
 };
 
 const renderSkills = (container, skills) => {
-  container.textContent = skills.join(" | ");
+  container.innerHTML = "";
+  // make the container focusable so hover/focus applies to the whole block
+  container.tabIndex = 0;
+  skills.forEach((skill) => {
+    const span = document.createElement("span");
+    span.className = "skill-badge";
+    span.textContent = skill;
+    container.appendChild(span);
+  });
 };
 
 const renderLanguages = (container, languages) => {
   renderList(container, languages);
+  // make the container focusable so hover/focus applies to the whole block
+  container.tabIndex = 0;
 };
 
 const renderEducation = (container, education) => {
