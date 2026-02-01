@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Code icon">
+  <rect width="64" height="64" rx="12" fill="#0f766e"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="26,20 16,32 26,44" />
+    <polyline points="38,20 48,32 38,44" />
+    <line x1="30" y1="18" x2="34" y2="46" />
+  </g>
+</svg>

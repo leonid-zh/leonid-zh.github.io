@@ -2,36 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Leonid — DevOps Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Platform / DevOps Engineer portfolio focused on infrastructure automation and high availability.">
+  <title>Leonid Zhavoronkov - Platform / DevOps Engineer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Leonid</h1>
-    <p>Platform & DevOps Engineer</p>
+  <header class="site-header" id="top">
+    <div class="container">
+      <h1 id="intro-name"></h1>
+      <p class="role" id="intro-role"></p>
+      <p class="value" id="intro-summary"></p>
+      <p class="meta" id="intro-meta"></p>
+      <ul class="contact" id="intro-links">
+        <li><a id="contact-github" href="#"><span class="icon icon-github" aria-hidden="true"></span><span class="link-text"></span></a></li>
+        <li><a id="contact-linkedin" href="#"><span class="icon icon-linkedin" aria-hidden="true"></span><span class="link-text"></span></a></li>
+        <li><a id="contact-email" href="#"><span class="icon icon-email" aria-hidden="true"></span><span class="link-text"></span></a></li>
+      </ul>
+    </div>
   </header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Proxmox, Clustering</li>
-      <li>Ansible, Terraform</li>
-      <li>Docker Swarm, HAProxy</li>
-      <li>Zabbix, ELK</li>
-    </ul>
-  </section>
+  <main class="container">
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <p class="skills-inline" id="skills-container"></p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <article>
-      <h3>Infrastructure Automation</h3>
-      <p>Automated Proxmox & Swarm with Terraform + Ansible.</p>
-    </article>
-  </section>
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience Summary</h2>
+      <div class="experience" id="experience-container"></div>
+    </section>
 
-  <footer>
-    <p>GitHub: <a href="https://github.com/<your>">github.com/<your></a></p>
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="education" id="education-container"></div>
+    </section>
+
+    <section id="languages" aria-labelledby="languages-title">
+      <h2 id="languages-title">Languages</h2>
+      <ul class="languages-list" id="languages-container"></ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span id="footer-year"></span> <span id="footer-name"></span> · <span id="footer-location"></span></p>
+    </div>
   </footer>
 </body>
 </html>

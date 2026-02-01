@@ -1,0 +1,102 @@
+{
+  "name": "Leonid Zhavoronkov",
+  "role": "Platform Engineer | DevOps Engineer",
+  "location": "Berlin, Germany",
+  "experience_years": "10+ years experience",
+  "summary": "Infrastructure & DevOps Engineer with more than 10 years of experience in designing, automating, and operating scalable systems. \nStrong background in Linux, containers, CI/​CD pipelines, and distributed services. I focus on reliability, automation, and long-term maintainability rather than quick hacks.I enjoy turning fragile setups into predictable, well-documented infrastructure.",
+  "skills": [
+    "Platform Engineering",
+    "Infrastructure as Code (IaC)",
+    "Terraform",
+    "Ansible",
+    "Docker Containers",
+    "Linux Systems",
+    "CI/CD Pipelines",
+    "GitLab CI",
+    "Proxmox Virtualization",
+    "High Availability"
+  ],
+  "languages": [
+    "English: B2 (Professional working proficiency)",
+    "German: B1 (Professional conversation)",
+    "Russian: Native",
+    "Georgian: Native"
+  ],
+  "education": [
+    {
+      "institution": "Ilia State University",
+      "degree": "Bachelor of Science in Mathematics and Informatics",
+      "dates": "Sep 2005 - Jun 2009",
+      "location": "Tbilisi, Georgia"
+    }
+  ],
+  "projects": [
+  {
+    "title": "VMware → Proxmox migration",
+    "problem": "Production stack depended on VMware licensing and brittle legacy tooling.",
+    "solution": "Designed and executed migration to Proxmox clusters with high availability.",
+    "tech": ["Proxmox", "Linux", "High Availability"],
+    "result": "Stable on-prem platform with reduced vendor lock-in."
+  },
+  {
+    "title": "Infrastructure as Code for Proxmox",
+    "problem": "Manual VM provisioning caused configuration drift and slow delivery.",
+    "solution": "Automated VM lifecycle, templates, and configuration using Terraform and Ansible.",
+    "tech": ["Terraform", "Ansible", "Proxmox"],
+    "result": "Predictable, version-controlled infrastructure changes."
+  },
+  {
+    "title": "Docker Swarm platform automation",
+    "problem": "Container platform required manual node setup and risky upgrades.",
+    "solution": "Automated Swarm cluster provisioning and service lifecycle with Ansible.",
+    "tech": ["Docker Swarm", "Ansible"],
+    "result": "Reusable cluster patterns and safer production rollouts."
+  }
+]
+,
+  "experience": [
+    {
+      "title": "Platform Engineer - Autohaus Royal GmbH",
+      "dates": "Jan 2025 - Present",
+      "location": "Berlin, Germany (Hybrid)",
+      "highlights": [
+        "Migrated production infrastructure from VMware to Proxmox, improving flexibility and reducing dependency on proprietary tooling.",
+        "Automated provisioning of clustered platforms (Docker Swarm, PostgreSQL, MongoDB, RabbitMQ, Redis, ELK) using Ansible.",
+        "Implemented HA deployments and automated upgrades for n8n and HAProxy.",
+        "Designed and operated Proxmox infrastructure using Terraform (IaC) for automated VM provisioning and lifecycle management.",
+        "Designed and deployed a centralized GlusterFS storage cluster integrated with Docker Swarm and Samba.",
+        "Built ~40 reusable Ansible roles, significantly reducing manual provisioning effort.",
+        "Implemented centralized monitoring with Zabbix, including automated agent rollout and service discovery."
+      ]
+    },
+    {
+      "title": "DevOps Engineer - TulaCo",
+      "dates": "Jun 2022 - Sep 2022",
+      "location": "Santa Monica, USA (Remote)",
+      "highlights": [
+        "Built and maintained CI/CD pipelines in Jenkins for 10+ projects.",
+        "Integrated SonarQube into Jenkins pipelines for automated code quality checks.",
+        "Migrated multiple Linux servers to newer OS versions, including application and database upgrades.",
+        "Managed AWS infrastructure (EC2, S3), including backups and basic scaling.",
+        "Implemented monitoring and alerting using Micro Focus SiteScope."
+      ]
+    },
+    {
+      "title": "System Administrator - IT-Lab LLC",
+      "dates": "Oct 2016 - Jun 2022",
+      "location": "Tbilisi, Georgia",
+      "highlights": [
+        "Operated and maintained VMware and Hyper-V clusters supporting core Windows services (AD, DNS, RDS).",
+        "Administered Linux servers (CentOS, Ubuntu) and on-prem IT infrastructure, including LAN/Wi-Fi networks, firewalls, switches, and routers.",
+        "Implemented 24/7 monitoring with Zabbix across servers and network devices.",
+        "Managed backups and disaster recovery processes, including multi-storage and S3-based backups.",
+        "Supported and scaled IT infrastructure for multiple companies and distributed offices."
+      ]
+    }
+  ],
+  "links": {
+    "github": "https://github.com/leonid-zh/",
+    "linkedin": "https://www.linkedin.com/in/lzhavoronkov",
+    "email": "l.zhavoronkov@gmail.com"
+  }
+}
