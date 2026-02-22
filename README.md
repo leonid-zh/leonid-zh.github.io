@@ -26,14 +26,6 @@ Static portfolio/resume website for a Platform / DevOps Engineer.
 - CSS3
 - Vanilla JavaScript
 
-## Run Locally
-
-```bash
-python3 -m http.server 8000
-```
-
-Open: `http://localhost:8000`
-
 ## Project Structure
 
 - `index.html` - semantic layout with placeholders
@@ -41,11 +33,3 @@ Open: `http://localhost:8000`
 - `main.js` - loads `data.json` and renders page content
 - `data.json` - portfolio/resume data source
 - `img/preview.png` - README preview image
-
-## Content Update
-
-Update `data.json` to change profile text, skills, experience, education, and links.
-
-## Deploy
-
-Designed for GitHub Pages. Push to default branch and Pages serves `index.html`.

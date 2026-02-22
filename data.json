@@ -1,102 +1,175 @@
 {
-  "name": "Leonid Zhavoronkov",
-  "role": "Platform Engineer | DevOps Engineer",
-  "location": "Berlin, Germany",
-  "experience_years": "10+ years experience",
-  "summary": "Infrastructure & DevOps Engineer with more than 10 years of experience in designing, automating, and operating scalable systems. \nStrong background in Linux, containers, CI/​CD pipelines, and distributed services. I focus on reliability, automation, and long-term maintainability rather than quick hacks.I enjoy turning fragile setups into predictable, well-documented infrastructure.",
-  "skills": [
-    "Platform Engineering",
-    "Infrastructure as Code (IaC)",
-    "Terraform",
-    "Ansible",
-    "Docker Containers",
-    "Linux Systems",
-    "CI/CD Pipelines",
-    "GitLab CI",
-    "Proxmox Virtualization",
-    "High Availability"
-  ],
-  "languages": [
-    "English: B2 (Professional working proficiency)",
-    "German: B1 (Professional conversation)",
-    "Russian: Native",
-    "Georgian: Native"
-  ],
-  "education": [
-    {
-      "institution": "Ilia State University",
-      "degree": "Bachelor of Science in Mathematics and Informatics",
-      "dates": "Sep 2005 - Jun 2009",
-      "location": "Tbilisi, Georgia"
-    }
-  ],
-  "projects": [
-  {
-    "title": "VMware → Proxmox migration",
-    "problem": "Production stack depended on VMware licensing and brittle legacy tooling.",
-    "solution": "Designed and executed migration to Proxmox clusters with high availability.",
-    "tech": ["Proxmox", "Linux", "High Availability"],
-    "result": "Stable on-prem platform with reduced vendor lock-in."
-  },
-  {
-    "title": "Infrastructure as Code for Proxmox",
-    "problem": "Manual VM provisioning caused configuration drift and slow delivery.",
-    "solution": "Automated VM lifecycle, templates, and configuration using Terraform and Ansible.",
-    "tech": ["Terraform", "Ansible", "Proxmox"],
-    "result": "Predictable, version-controlled infrastructure changes."
-  },
-  {
-    "title": "Docker Swarm platform automation",
-    "problem": "Container platform required manual node setup and risky upgrades.",
-    "solution": "Automated Swarm cluster provisioning and service lifecycle with Ansible.",
-    "tech": ["Docker Swarm", "Ansible"],
-    "result": "Reusable cluster patterns and safer production rollouts."
-  }
-]
-,
-  "experience": [
-    {
-      "title": "Platform Engineer - Autohaus Royal GmbH",
-      "dates": "Jan 2025 - Present",
-      "location": "Berlin, Germany (Hybrid)",
-      "highlights": [
-        "Migrated production infrastructure from VMware to Proxmox, improving flexibility and reducing dependency on proprietary tooling.",
-        "Automated provisioning of clustered platforms (Docker Swarm, PostgreSQL, MongoDB, RabbitMQ, Redis, ELK) using Ansible.",
-        "Implemented HA deployments and automated upgrades for n8n and HAProxy.",
-        "Designed and operated Proxmox infrastructure using Terraform (IaC) for automated VM provisioning and lifecycle management.",
-        "Designed and deployed a centralized GlusterFS storage cluster integrated with Docker Swarm and Samba.",
-        "Built ~40 reusable Ansible roles, significantly reducing manual provisioning effort.",
-        "Implemented centralized monitoring with Zabbix, including automated agent rollout and service discovery."
-      ]
-    },
-    {
-      "title": "DevOps Engineer - TulaCo",
-      "dates": "Jun 2022 - Sep 2022",
-      "location": "Santa Monica, USA (Remote)",
-      "highlights": [
-        "Built and maintained CI/CD pipelines in Jenkins for 10+ projects.",
-        "Integrated SonarQube into Jenkins pipelines for automated code quality checks.",
-        "Migrated multiple Linux servers to newer OS versions, including application and database upgrades.",
-        "Managed AWS infrastructure (EC2, S3), including backups and basic scaling.",
-        "Implemented monitoring and alerting using Micro Focus SiteScope."
-      ]
-    },
-    {
-      "title": "System Administrator - IT-Lab LLC",
-      "dates": "Oct 2016 - Jun 2022",
-      "location": "Tbilisi, Georgia",
-      "highlights": [
-        "Operated and maintained VMware and Hyper-V clusters supporting core Windows services (AD, DNS, RDS).",
-        "Administered Linux servers (CentOS, Ubuntu) and on-prem IT infrastructure, including LAN/Wi-Fi networks, firewalls, switches, and routers.",
-        "Implemented 24/7 monitoring with Zabbix across servers and network devices.",
-        "Managed backups and disaster recovery processes, including multi-storage and S3-based backups.",
-        "Supported and scaled IT infrastructure for multiple companies and distributed offices."
-      ]
-    }
-  ],
   "links": {
     "github": "https://github.com/leonid-zh/",
     "linkedin": "https://www.linkedin.com/in/lzhavoronkov",
     "email": "l.zhavoronkov@gmail.com"
+  },
+  "locales": {
+    "en": {
+      "name": "Leonid Zhavoronkov",
+      "role": "Platform Engineer | DevOps Engineer",
+      "location": "Berlin, Germany",
+      "summary": "Infrastructure & DevOps Engineer with more than 10 years of experience in designing, automating, and operating scalable systems. Strong background in Linux, containers, CI/CD pipelines, and distributed services. I focus on reliability, automation, and long-term maintainability rather than quick hacks. I enjoy turning fragile setups into predictable, well-documented infrastructure.",
+      "skills": [
+        "Platform Engineering",
+        "Infrastructure as Code (IaC)",
+        "Terraform",
+        "Ansible",
+        "Docker Containers",
+        "Linux Systems",
+        "CI/CD Pipelines",
+        "GitLab CI",
+        "Proxmox Virtualization",
+        "High Availability"
+      ],
+      "languages": [
+        "English: B2 (Professional working proficiency)",
+        "German: B1 (Professional conversation)",
+        "Russian: Native",
+        "Georgian: Native"
+      ],
+      "education": [
+        {
+          "institution": "Ilia State University",
+          "degree": "Bachelor of Science in Mathematics and Informatics",
+          "dates": "Sep 2005 - Jun 2009",
+          "location": "Tbilisi, Georgia"
+        }
+      ],
+      "experience": [
+        {
+          "title": "Platform Engineer - Autohaus Royal GmbH",
+          "dates": "Jan 2025 - Present",
+          "location": "Berlin, Germany (Hybrid)",
+          "highlights": [
+            "Migrated production infrastructure from VMware to Proxmox, improving flexibility and reducing dependency on proprietary tooling.",
+            "Automated provisioning of clustered platforms (Docker Swarm, PostgreSQL, MongoDB, RabbitMQ, Redis, ELK) using Ansible.",
+            "Implemented HA deployments and automated upgrades for n8n and HAProxy.",
+            "Designed and operated Proxmox infrastructure using Terraform (IaC) for automated VM provisioning and lifecycle management.",
+            "Designed and deployed a centralized GlusterFS storage cluster integrated with Docker Swarm and Samba.",
+            "Built ~40 reusable Ansible roles, significantly reducing manual provisioning effort.",
+            "Implemented centralized monitoring with Zabbix, including automated agent rollout and service discovery."
+          ]
+        },
+        {
+          "title": "DevOps Engineer - TulaCo",
+          "dates": "Jun 2022 - Sep 2022",
+          "location": "Santa Monica, USA (Remote)",
+          "highlights": [
+            "Built and maintained CI/CD pipelines in Jenkins for 10+ projects.",
+            "Integrated SonarQube into Jenkins pipelines for automated code quality checks.",
+            "Migrated multiple Linux servers to newer OS versions, including application and database upgrades.",
+            "Managed AWS infrastructure (EC2, S3), including backups and basic scaling.",
+            "Implemented monitoring and alerting using Micro Focus SiteScope."
+          ]
+        },
+        {
+          "title": "System Administrator - IT-Lab LLC",
+          "dates": "Oct 2016 - Jun 2022",
+          "location": "Tbilisi, Georgia",
+          "highlights": [
+            "Operated and maintained VMware and Hyper-V clusters supporting core Windows services (AD, DNS, RDS).",
+            "Administered Linux servers (CentOS, Ubuntu) and on-prem IT infrastructure, including LAN/Wi-Fi networks, firewalls, switches, and routers.",
+            "Implemented 24/7 monitoring with Zabbix across servers and network devices.",
+            "Managed backups and disaster recovery processes, including multi-storage and S3-based backups.",
+            "Supported and scaled IT infrastructure for multiple companies and distributed offices."
+          ]
+        }
+      ],
+      "ui": {
+        "page_title": "Leonid Zhavoronkov - Platform / DevOps Engineer",
+        "page_description": "Platform / DevOps Engineer portfolio focused on infrastructure automation and high availability.",
+        "skills_title": "Skills",
+        "experience_title": "Experience Summary",
+        "education_title": "Education",
+        "languages_title": "Languages",
+        "download_cv_label": "Download CV",
+        "github_label": "GitHub",
+        "linkedin_label": "LinkedIn"
+      }
+    },
+    "de": {
+      "name": "Leonid Zhavoronkov",
+      "role": "Platform Engineer | DevOps Engineer",
+      "location": "Berlin, Deutschland",
+      "summary": "Infrastructure- und DevOps-Engineer mit mehr als 10 Jahren Erfahrung im Design, in der Automatisierung und im Betrieb skalierbarer Systeme. Starker Hintergrund in Linux, Containern, CI/CD-Pipelines und verteilten Services. Mein Fokus liegt auf Zuverlässigkeit, Automatisierung und langfristiger Wartbarkeit statt auf kurzfristigen Workarounds. Ich verwandle fragile Setups in planbare, gut dokumentierte Infrastruktur.",
+      "skills": [
+        "Platform Engineering",
+        "Infrastructure as Code (IaC)",
+        "Terraform",
+        "Ansible",
+        "Docker-Container",
+        "Linux-Systeme",
+        "CI/CD-Pipelines",
+        "GitLab CI",
+        "Proxmox-Virtualisierung",
+        "Hochverfügbarkeit"
+      ],
+      "languages": [
+        "Englisch: B2 (Berufliche Arbeitskompetenz)",
+        "Deutsch: B1 (Berufliche Konversation)",
+        "Russisch: Muttersprache",
+        "Georgisch: Muttersprache"
+      ],
+      "education": [
+        {
+          "institution": "Ilia State University",
+          "degree": "Bachelor of Science in Mathematik und Informatik",
+          "dates": "Sep 2005 - Jun 2009",
+          "location": "Tiflis, Georgien"
+        }
+      ],
+      "experience": [
+        {
+          "title": "Platform Engineer - Autohaus Royal GmbH",
+          "dates": "Jan 2025 - Heute",
+          "location": "Berlin, Deutschland (Hybrid)",
+          "highlights": [
+            "Produktionsinfrastruktur von VMware auf Proxmox migriert und dadurch Flexibilität erhöht sowie Abhängigkeit von proprietären Tools reduziert.",
+            "Bereitstellung geclusterter Plattformen (Docker Swarm, PostgreSQL, MongoDB, RabbitMQ, Redis, ELK) mit Ansible automatisiert.",
+            "HA-Deployments und automatisierte Upgrades für n8n und HAProxy umgesetzt.",
+            "Proxmox-Infrastruktur mit Terraform (IaC) für automatisierte VM-Bereitstellung und Lifecycle-Management entworfen und betrieben.",
+            "Zentralen GlusterFS-Storage-Cluster aufgebaut und in Docker Swarm sowie Samba integriert.",
+            "Rund 40 wiederverwendbare Ansible-Rollen erstellt und den manuellen Provisioning-Aufwand deutlich reduziert.",
+            "Zentrales Monitoring mit Zabbix inklusive automatisiertem Agent-Rollout und Service-Discovery implementiert."
+          ]
+        },
+        {
+          "title": "DevOps Engineer - TulaCo",
+          "dates": "Jun 2022 - Sep 2022",
+          "location": "Santa Monica, USA (Remote)",
+          "highlights": [
+            "CI/CD-Pipelines in Jenkins für mehr als 10 Projekte aufgebaut und betreut.",
+            "SonarQube in Jenkins-Pipelines für automatisierte Code-Qualitätsprüfungen integriert.",
+            "Mehrere Linux-Server auf neuere OS-Versionen migriert, inklusive Applikations- und Datenbank-Upgrades.",
+            "AWS-Infrastruktur (EC2, S3) betrieben, inklusive Backups und grundlegender Skalierung.",
+            "Monitoring und Alerting mit Micro Focus SiteScope implementiert."
+          ]
+        },
+        {
+          "title": "Systemadministrator - IT-Lab LLC",
+          "dates": "Okt 2016 - Jun 2022",
+          "location": "Tiflis, Georgien",
+          "highlights": [
+            "VMware- und Hyper-V-Cluster für zentrale Windows-Dienste (AD, DNS, RDS) betrieben und gewartet.",
+            "Linux-Server (CentOS, Ubuntu) sowie On-Prem-IT-Infrastruktur inklusive LAN/Wi-Fi, Firewalls, Switches und Router administriert.",
+            "24/7-Monitoring mit Zabbix für Server und Netzwerkgeräte eingeführt.",
+            "Backup- und Disaster-Recovery-Prozesse inklusive Multi-Storage- und S3-basierten Backups umgesetzt.",
+            "IT-Infrastruktur für mehrere Unternehmen und verteilte Standorte skaliert und betreut."
+          ]
+        }
+      ],
+      "ui": {
+        "page_title": "Leonid Zhavoronkov - Platform / DevOps Engineer",
+        "page_description": "Portfolio eines Platform/DevOps Engineers mit Fokus auf Infrastrukturautomatisierung und Hochverfügbarkeit.",
+        "skills_title": "Kompetenzen",
+        "experience_title": "Berufserfahrung",
+        "education_title": "Ausbildung",
+        "languages_title": "Sprachen",
+        "download_cv_label": "Lebenslauf herunterladen",
+        "github_label": "GitHub",
+        "linkedin_label": "LinkedIn"
+      }
+    }
   }
 }

@@ -10,7 +10,23 @@
   --accent: #1e293b;
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08), 0 1px 1px rgba(15, 23, 42, 0.04);
   --shadow-md: 0 10px 20px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.06);
+  --switch-hover: #f3f6fa;
   --max-width: 920px;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --surface: #111b2d;
+  --surface-2: #0c1627;
+  --text: #e5edf8;
+  --muted: #9badc4;
+  --border: #27384d;
+  --primary: #0f766e;
+  --primary-700: #0f766e;
+  --accent: #d7e3f5;
+  --shadow-sm: 0 2px 5px rgba(2, 6, 23, 0.45);
+  --shadow-md: 0 12px 24px rgba(2, 6, 23, 0.55);
+  --switch-hover: #1a2a40;
 }
 
 * {
@@ -57,7 +73,53 @@ a:focus {
 .site-header {
   padding: 3.5rem 0 2.5rem;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(135deg, #ffffff 0%, var(--surface-2) 100%);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+}
+
+.site-header .container {
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+.lang-btn + .lang-btn {
+  border-left: 1px solid var(--border);
+}
+
+.lang-btn:hover,
+.lang-btn:focus {
+  color: var(--primary-700);
+  background: var(--switch-hover);
+}
+
+.lang-btn.is-active {
+  color: #ffffff;
+  background: var(--primary-700);
+}
+
+.theme-btn {
+  min-width: 4.2rem;
 }
 
 .eyebrow {
@@ -286,6 +348,10 @@ section {
     flex-direction: column;
     gap: 0.4rem;
   }
+
+  .lang-switch {
+    right: 1.5rem;
+  }
 }
 
 @page {
@@ -314,10 +380,17 @@ section {
 
   section {
     margin-bottom: 1rem;
-    break-inside: avoid-page;
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
-  .role-card,
+  .role-card {
+    box-shadow: none;
+    border-color: #d0d0d0;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
   .skills-inline,
   .languages-list {
     box-shadow: none;
@@ -334,6 +407,10 @@ section {
   }
 
   #contact-resume {
+    display: none !important;
+  }
+
+  .lang-switch {
     display: none !important;
   }
 
