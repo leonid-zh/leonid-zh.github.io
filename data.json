@@ -92,18 +92,18 @@
       "name": "Leonid Zhavoronkov",
       "role": "Platform Engineer | DevOps Engineer",
       "location": "Berlin, Deutschland",
-      "summary": "Infrastructure- und DevOps-Engineer mit mehr als 10 Jahren Erfahrung im Design, in der Automatisierung und im Betrieb skalierbarer Systeme. Starker Hintergrund in Linux, Containern, CI/CD-Pipelines und verteilten Services. Mein Fokus liegt auf Zuverlässigkeit, Automatisierung und langfristiger Wartbarkeit statt auf kurzfristigen Workarounds. Ich verwandle fragile Setups in planbare, gut dokumentierte Infrastruktur.",
+      "summary": "Infrastruktur- und DevOps-Ingenieur mit mehr als 10 Jahren Erfahrung in der Konzeption, Automatisierung und dem Betrieb skalierbarer Systeme. Fundierte Kenntnisse in Linux, Containern, CI/CD-Pipelines und verteilten Diensten. Mein Fokus liegt auf Zuverlässigkeit, Automatisierung und langfristiger Wartbarkeit statt auf schnellen Hacks. Ich habe Freude daran, fragile Setups in vorhersehbare, gut dokumentierte Infrastrukturen zu verwandeln.",
       "skills": [
         "Platform Engineering",
         "Infrastructure as Code (IaC)",
         "Terraform",
         "Ansible",
-        "Docker-Container",
-        "Linux-Systeme",
-        "CI/CD-Pipelines",
+        "Docker Containers",
+        "Linux Systems",
+        "CI/CD Pipelines",
         "GitLab CI",
-        "Proxmox-Virtualisierung",
-        "Hochverfügbarkeit"
+        "Proxmox Virtualization",
+        "High Availability"
       ],
       "languages": [
         "Englisch: B2 (Berufliche Arbeitskompetenz)",

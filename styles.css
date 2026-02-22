@@ -360,6 +360,18 @@ section {
 }
 
 @media print {
+  :root,
+  :root[data-theme="dark"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --text: #111111;
+    --muted: #4b5563;
+    --border: #d0d0d0;
+    --primary: #0f766e;
+    --primary-700: #0f766e;
+  }
+
   body {
     background: #ffffff;
     line-height: 1.35;
@@ -396,6 +408,12 @@ section {
     box-shadow: none;
     border-color: #d0d0d0;
     break-inside: avoid-page;
+    color: #111111;
+  }
+
+  .skill-badge,
+  .languages-list > li {
+    color: #111111;
   }
 
   .project:hover,
