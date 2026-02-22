@@ -307,3 +307,62 @@ section {
     gap: 0.4rem;
   }
 }
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    line-height: 1.35;
+    font-size: 10.5pt;
+    color: #111111;
+  }
+
+  .site-header,
+  .site-footer {
+    background: #ffffff;
+    border-color: #d0d0d0;
+    padding: 0 0 0.5rem;
+  }
+
+  main {
+    padding: 0.7rem 0 0;
+  }
+
+  section {
+    margin-bottom: 1rem;
+    break-inside: avoid-page;
+  }
+
+  .role-card,
+  .skills-inline,
+  .languages-list {
+    box-shadow: none;
+    border-color: #d0d0d0;
+    break-inside: avoid-page;
+  }
+
+  .project:hover,
+  .role-card:hover,
+  .skills-inline:hover,
+  .languages-list:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .download-link {
+    display: none !important;
+  }
+
+  a {
+    color: inherit;
+    border-bottom: none;
+  }
+
+  .icon {
+    background-color: #111111;
+  }
+}

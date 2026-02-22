@@ -124,16 +124,12 @@ const renderLinks = (links) => {
   linkedin.querySelector(".link-text").textContent = "LinkedIn";
 
   const resume = byId("contact-resume");
-  if (links.resume_pdf) {
-    resume.href = links.resume_pdf;
-    resume.setAttribute("download", "");
-    resume.querySelector(".link-text").textContent = "Download CV (PDF, A4)";
-    resume.removeAttribute("aria-hidden");
-    resume.style.removeProperty("display");
-  } else {
-    resume.setAttribute("aria-hidden", "true");
-    resume.style.display = "none";
-  }
+  resume.href = "#";
+  resume.querySelector(".link-text").textContent = "Download CV (PDF, A4)";
+  resume.onclick = (event) => {
+    event.preventDefault();
+    window.print();
+  };
 
   const email = byId("contact-email");
   email.href = `mailto:${links.email}`;
