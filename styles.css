@@ -239,6 +239,26 @@ section {
   padding: 0.2rem 0;
 }
 
+.contact .download-link {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--primary-700);
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact .download-link:hover,
+.contact .download-link:focus {
+  background: var(--primary-700);
+  color: #ffffff;
+  border-bottom-color: transparent;
+}
+
+.contact .download-link:hover .icon,
+.contact .download-link:focus .icon {
+  background-color: #ffffff;
+}
+
 .icon {
   width: 18px;
   height: 18px;
@@ -259,6 +279,10 @@ section {
 
 .icon-email {
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z'/%3E%3C/svg%3E");
+}
+
+.icon-download {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M5 20h14v-2H5v2zm7-18v10.17l3.59-3.58L17 10l-5 5-5-5 1.41-1.41L11 12.17V2h1z'/%3E%3C/svg%3E");
 }
 
 .site-footer {
