@@ -239,26 +239,6 @@ section {
   padding: 0.2rem 0;
 }
 
-.contact .download-link {
-  padding: 0.4rem 0.75rem;
-  border: 1px solid var(--primary-700);
-  border-radius: 999px;
-  font-weight: 600;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.contact .download-link:hover,
-.contact .download-link:focus {
-  background: var(--primary-700);
-  color: #ffffff;
-  border-bottom-color: transparent;
-}
-
-.contact .download-link:hover .icon,
-.contact .download-link:focus .icon {
-  background-color: #ffffff;
-}
-
 .icon {
   width: 18px;
   height: 18px;
@@ -353,7 +333,7 @@ section {
     box-shadow: none;
   }
 
-  .download-link {
+  #contact-resume {
     display: none !important;
   }
 
