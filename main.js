@@ -125,7 +125,7 @@ const renderLinks = (links) => {
 
   const resume = byId("contact-resume");
   resume.href = "#";
-  resume.querySelector(".link-text").textContent = "Download CV (PDF, A4)";
+  resume.querySelector(".link-text").textContent = "Download CV";
   resume.onclick = (event) => {
     event.preventDefault();
     window.print();
