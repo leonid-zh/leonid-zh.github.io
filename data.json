@@ -1,4 +1,5 @@
 {
+  "profile_image": "img/profile.jpeg",
   "links": {
     "github": "https://github.com/leonid-zh/",
     "linkedin": "https://www.linkedin.com/in/lzhavoronkov",
@@ -11,17 +12,41 @@
       "location": "Berlin, Germany",
       "summary": "Infrastructure & DevOps Engineer with more than 10 years of experience in designing, automating, and operating scalable systems. Strong background in Linux, containers, CI/CD pipelines, and distributed services. I focus on reliability, automation, and long-term maintainability rather than quick hacks. I enjoy turning fragile setups into predictable, well-documented infrastructure.",
       "skills": [
-        "Platform Engineering",
-        "Infrastructure as Code (IaC)",
-        "Amazon Web Services (AWS)",
-        "Terraform",
-        "Ansible",
-        "Docker Containers",
-        "Linux Systems",
-        "CI/CD Pipelines",
-        "GitLab CI",
-        "Proxmox Virtualization",
-        "High Availability"
+        "Infrastructure as Code, Automation & Configuration Management",
+        "CI/CD Pipelines, GitOps & Platform Engineering",
+        "Linux, Virtualization & Private Cloud Infrastructure",
+        "Container Platforms, High Availability & Load Balancing",
+        "Database Platforms, Replication & Messaging Systems",
+        "Monitoring, Observability & Operational Reliability",
+        "Infrastructure Security, Identity & Access Management",
+        "Network Architecture, Segmentation & Infrastructure Services"
+      ],
+      "side_projects": [
+        {
+          "title": "Proxmox VM Template Preparation Script",
+          "url": "https://github.com/leonid-zh/proxmox-template-prep",
+          "description": "Production-ready script for preparing Linux virtual machines before converting them into clean Proxmox templates."
+        },
+        {
+          "title": "Linux server audit",
+          "url": "https://github.com/leonid-zh/linux-server-audit",
+          "description": "Lightweight VPS audit script that runs without root. It prints a colorized local log and writes a plain-text report. Primary support is Debian and Ubuntu; other Linux distributions are best-effort."
+        },
+        {
+          "title": "Automatic DNS Registration for Ubuntu VM Templates (AD DNS)",
+          "url": "https://github.com/leonid-zh/ad-dns-auto-registration",
+          "description": "Automatically registers Ubuntu VMs in an Active Directory-integrated DNS zone using dynamic DNS updates. On every boot, the systemd service detects the current hostname and DHCP IP address, updates the DNS A record, and ensures cloned VMs remain correctly registered without cloud-init."
+        },
+        {
+          "title": "microsip-gpo-setup",
+          "url": "https://github.com/leonid-zh/microsip-gpo-setup",
+          "description": "PowerShell script for auto-configuring the MicroSIP softphone on Windows from a Google Sheets CSV and deploying it as a Group Policy logon script."
+        },
+        {
+          "title": "json-edit",
+          "url": "https://github.com/leonid-zh/json-edit",
+          "description": "Small self-hosted web UI for editing project JSON files, managing variable comments separately, and publishing clean static JSON endpoints."
+        }
       ],
       "languages": [
         "English: B2 (Professional working proficiency)",
@@ -43,13 +68,16 @@
           "dates": "Jan 2025 - Present",
           "location": "Berlin, Germany (Hybrid)",
           "highlights": [
-            "Migrated production infrastructure from VMware to Proxmox, improving flexibility and reducing dependency on proprietary tooling.",
-            "Automated provisioning of clustered platforms (Docker Swarm, PostgreSQL, MongoDB, RabbitMQ, Redis, ELK) using Ansible.",
-            "Implemented HA deployments and automated upgrades for n8n and HAProxy.",
-            "Designed and operated Proxmox infrastructure using Terraform (IaC) for automated VM provisioning and lifecycle management.",
-            "Designed and deployed a centralized GlusterFS storage cluster integrated with Docker Swarm and Samba.",
-            "Built ~40 reusable Ansible roles, significantly reducing manual provisioning effort.",
-            "Implemented centralized monitoring with Zabbix, including automated agent rollout and service discovery."
+            "Migrated production infrastructure from VMware to Proxmox, redesigning VM layouts and storage architecture.",
+            "Designed and automated infrastructure provisioning with Ansible and Terraform for clustered and standalone environments (Docker Swarm, PostgreSQL, MongoDB, RabbitMQ, Redis, ELK, MySQL, Sentry, WordPress).",
+            "Established GitLab as the central platform for Infrastructure as Code, CI/CD, configuration management, and automated infrastructure provisioning.",
+            "Designed and implemented automated security management for Linux servers, databases, and network access through GitLab-driven infrastructure pipelines.",
+            "Built automated deployment and upgrade workflows for n8n and implemented highly available HAProxy configurations with automatic failover.",
+            "Designed and deployed a centralized GlusterFS cluster, migrated existing data, and integrated shared storage with Docker Swarm and Samba.",
+            "Automated Docker volume lifecycle management to standardize persistent storage across environments.",
+            "Implemented centralized infrastructure monitoring with Zabbix, including automated agent deployment, service discovery, and OS update monitoring.",
+            "Developed 40+ reusable Ansible roles to standardize infrastructure provisioning and reduce operational overhead.",
+            "Optimized GitLab repositories, CI/CD pipelines, dependency management, and code delivery workflows to improve deployment reliability and developer productivity."
           ]
         },
         {
@@ -80,13 +108,19 @@
       "ui": {
         "page_title": "Leonid Zhavoronkov - Platform / DevOps Engineer",
         "page_description": "Platform / DevOps Engineer portfolio focused on infrastructure automation and high availability.",
+        "about_title": "About",
         "skills_title": "Skills",
+        "side_projects_title": "Side Projects",
         "experience_title": "Experience Summary",
+        "experience_nav": "Experience",
         "education_title": "Education",
         "languages_title": "Languages",
+        "contact_title": "Contact",
+        "contact_note": "Feel free to reach out for platform engineering, DevOps, infrastructure automation, or reliability-focused projects.",
         "download_cv_label": "Download CV",
         "github_label": "GitHub",
-        "linkedin_label": "LinkedIn"
+        "linkedin_label": "LinkedIn",
+        "facebook_label": "Facebook"
       }
     },
     "de": {
@@ -95,17 +129,41 @@
       "location": "Berlin, Deutschland",
       "summary": "Infrastruktur- und DevOps-Ingenieur mit mehr als 10 Jahren Erfahrung in der Konzeption, Automatisierung und dem Betrieb skalierbarer Systeme. Fundierte Kenntnisse in Linux, Containern, CI/CD-Pipelines und verteilten Diensten. Mein Fokus liegt auf Zuverlässigkeit, Automatisierung und langfristiger Wartbarkeit statt auf schnellen Hacks. Ich habe Freude daran, fragile Setups in vorhersehbare, gut dokumentierte Infrastrukturen zu verwandeln.",
       "skills": [
-        "Platform Engineering",
-        "Infrastructure as Code (IaC)",
-        "Amazon Web Services (AWS)",
-        "Terraform",
-        "Ansible",
-        "Docker Containers",
-        "Linux Systems",
-        "CI/CD Pipelines",
-        "GitLab CI",
-        "Proxmox Virtualization",
-        "High Availability"
+        "Infrastructure as Code, Automatisierung & Konfigurationsmanagement",
+        "CI/CD-Pipelines, GitOps & Platform Engineering",
+        "Linux-, Virtualisierungs- & Private-Cloud-Infrastruktur",
+        "Container-Plattformen, Hochverfügbarkeit & Load Balancing",
+        "Datenbankplattformen, Replikation & Messaging-Systeme",
+        "Monitoring, Observability & Betriebssicherheit",
+        "Infrastruktursicherheit, Identitäts- & Zugriffsmanagement",
+        "Netzwerkarchitektur, Netzwerksegmentierung & Infrastrukturdienste"
+      ],
+      "side_projects": [
+        {
+          "title": "Proxmox VM Template Preparation Script",
+          "url": "https://github.com/leonid-zh/proxmox-template-prep",
+          "description": "Produktionsreifes Script zur Vorbereitung von Linux-VMs, bevor sie in saubere Proxmox-Templates umgewandelt werden."
+        },
+        {
+          "title": "Linux server audit",
+          "url": "https://github.com/leonid-zh/linux-server-audit",
+          "description": "Leichtgewichtiges VPS-Audit-Script, das ohne Root-Rechte läuft. Es gibt ein farbiges lokales Log aus und schreibt einen Plain-Text-Report. Primär unterstützt werden Debian und Ubuntu; andere Linux-Distributionen werden best-effort unterstützt."
+        },
+        {
+          "title": "Automatic DNS Registration for Ubuntu VM Templates (AD DNS)",
+          "url": "https://github.com/leonid-zh/ad-dns-auto-registration",
+          "description": "Registriert Ubuntu-VMs automatisch in einer Active-Directory-integrierten DNS-Zone über dynamische DNS-Updates. Bei jedem Boot erkennt der systemd-Service den aktuellen Hostnamen und die DHCP-IP-Adresse, aktualisiert den DNS-A-Record und stellt sicher, dass geklonte VMs ohne cloud-init korrekt registriert bleiben."
+        },
+        {
+          "title": "microsip-gpo-setup",
+          "url": "https://github.com/leonid-zh/microsip-gpo-setup",
+          "description": "PowerShell-Script zur automatischen Konfiguration des MicroSIP-Softphones unter Windows aus einer Google-Sheets-CSV und zur Bereitstellung als GPO-Logon-Script."
+        },
+        {
+          "title": "json-edit",
+          "url": "https://github.com/leonid-zh/json-edit",
+          "description": "Kleine selbst gehostete Weboberfläche zum Bearbeiten von Projekt-JSON-Dateien, separaten Verwalten von Variablenkommentaren und Veröffentlichen sauberer statischer JSON-Endpunkte."
+        }
       ],
       "languages": [
         "Englisch: B2 (Berufliche Arbeitskompetenz)",
@@ -164,13 +222,19 @@
       "ui": {
         "page_title": "Leonid Zhavoronkov - Platform / DevOps Engineer",
         "page_description": "Portfolio eines Platform/DevOps Engineers mit Fokus auf Infrastrukturautomatisierung und Hochverfügbarkeit.",
+        "about_title": "Über mich",
         "skills_title": "Kompetenzen",
+        "side_projects_title": "Side Projects",
         "experience_title": "Berufserfahrung",
+        "experience_nav": "Erfahrung",
         "education_title": "Ausbildung",
         "languages_title": "Sprachen",
+        "contact_title": "Kontakt",
+        "contact_note": "Kontaktieren Sie mich gern für Platform Engineering, DevOps, Infrastrukturautomatisierung oder Reliability-Projekte.",
         "download_cv_label": "Lebenslauf herunterladen",
         "github_label": "GitHub",
-        "linkedin_label": "LinkedIn"
+        "linkedin_label": "LinkedIn",
+        "facebook_label": "Facebook"
       }
     }
   }

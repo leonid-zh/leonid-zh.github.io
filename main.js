@@ -18,20 +18,15 @@ const renderList = (el, items) => {
 
 const renderSkills = (container, skills) => {
   container.innerHTML = "";
-  // make the container focusable so hover/focus applies to the whole block
-  container.tabIndex = 0;
   skills.forEach((skill) => {
-    const span = document.createElement("span");
-    span.className = "skill-badge";
-    span.textContent = skill;
-    container.appendChild(span);
+    const li = document.createElement("li");
+    li.textContent = skill;
+    container.appendChild(li);
   });
 };
 
 const renderLanguages = (container, languages) => {
   renderList(container, languages);
-  // make the container focusable so hover/focus applies to the whole block
-  container.tabIndex = 0;
 };
 
 const renderEducation = (container, education) => {
@@ -40,49 +35,61 @@ const renderEducation = (container, education) => {
     const article = document.createElement("article");
     article.className = "role-card";
 
+    const body = document.createElement("div");
+
     const title = document.createElement("h3");
     title.textContent = item.institution;
-    article.appendChild(title);
+    body.appendChild(title);
 
     const degree = document.createElement("p");
     degree.textContent = item.degree;
-    article.appendChild(degree);
+    body.appendChild(degree);
 
-    const meta = document.createElement("p");
-    meta.className = "meta";
-    meta.textContent = `${item.dates} · ${item.location}`;
-    article.appendChild(meta);
+    if (item.location) {
+      const meta = document.createElement("p");
+      meta.className = "meta";
+      meta.textContent = item.location;
+      body.appendChild(meta);
+    }
+
+    const date = document.createElement("div");
+    date.className = "role-date";
+    date.textContent = item.dates;
+
+    article.appendChild(body);
+    article.appendChild(date);
 
     container.appendChild(article);
   });
 };
 
-const renderProjects = (container, projects) => {
+const renderSideProjects = (container, projects) => {
   container.innerHTML = "";
+  if (!projects || projects.length === 0) {
+    return;
+  }
+
   projects.forEach((project) => {
     const article = document.createElement("article");
-    article.className = "project";
+    article.className = "showcase-item";
 
     const title = document.createElement("h3");
-    title.textContent = project.title;
+    if (project.url) {
+      const link = document.createElement("a");
+      link.href = project.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = project.title;
+      title.appendChild(link);
+    } else {
+      title.textContent = project.title;
+    }
 
-    const problem = document.createElement("p");
-    problem.innerHTML = `<span class=\"label\">Problem:</span> ${project.problem}`;
-
-    const solution = document.createElement("p");
-    solution.innerHTML = `<span class=\"label\">Designed / Automated:</span> ${project.solution}`;
-
-    const tech = document.createElement("p");
-    tech.innerHTML = `<span class=\"label\">Technologies:</span> ${project.tech.join(", ")}.`;
-
-    const result = document.createElement("p");
-    result.innerHTML = `<span class=\"label\">Result:</span> ${project.result}`;
+    const description = document.createElement("p");
+    description.textContent = project.description || "";
 
     article.appendChild(title);
-    article.appendChild(problem);
-    article.appendChild(solution);
-    article.appendChild(tech);
-    article.appendChild(result);
+    article.appendChild(description);
     container.appendChild(article);
   });
 };
@@ -93,40 +100,103 @@ const renderExperience = (container, experience) => {
     const article = document.createElement("article");
     article.className = "role-card";
 
+    const body = document.createElement("div");
+
     const title = document.createElement("h3");
     title.textContent = role.title;
+    body.appendChild(title);
 
-    article.appendChild(title);
-
-    if (role.dates || role.location) {
+    if (role.location) {
       const meta = document.createElement("p");
       meta.className = "meta";
-      if (role.dates && role.location) {
-        meta.textContent = `${role.dates} · ${role.location}`;
-      } else {
-        meta.textContent = role.dates || role.location;
-      }
-      article.appendChild(meta);
+      meta.textContent = role.location;
+      body.appendChild(meta);
     }
 
     if (role.highlights && role.highlights.length) {
       const list = document.createElement("ul");
       renderList(list, role.highlights);
-      article.appendChild(list);
+      body.appendChild(list);
     }
+
+    const date = document.createElement("div");
+    date.className = "role-date";
+    date.textContent = role.dates || "";
+
+    article.appendChild(body);
+    article.appendChild(date);
 
     container.appendChild(article);
   });
 };
 
+const setOptionalLink = (link, url) => {
+  if (!link) {
+    return;
+  }
+  const hasUrl = Boolean(url);
+  link.hidden = !hasUrl;
+  link.closest("li").hidden = !hasUrl;
+  if (hasUrl) {
+    link.href = url;
+  }
+};
+
+const createContactItem = (label, href, iconClass, external = true) => {
+  const li = document.createElement("li");
+  const link = document.createElement("a");
+  link.href = href;
+  if (external) {
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  }
+
+  const icon = document.createElement("span");
+  icon.className = `icon ${iconClass}`;
+  icon.setAttribute("aria-hidden", "true");
+
+  const text = document.createElement("span");
+  text.textContent = label;
+
+  link.appendChild(icon);
+  link.appendChild(text);
+  li.appendChild(link);
+  return li;
+};
+
+const renderContactList = (links, ui) => {
+  const container = byId("contact-list");
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = "";
+  if (links.email) {
+    container.appendChild(createContactItem(links.email, `mailto:${links.email}`, "icon-email", false));
+  }
+  if (links.linkedin) {
+    container.appendChild(createContactItem(ui.linkedin_label || "LinkedIn", links.linkedin, "icon-linkedin"));
+  }
+  if (links.github) {
+    container.appendChild(createContactItem(ui.github_label || "GitHub", links.github, "icon-github"));
+  }
+  if (links.facebook) {
+    container.appendChild(createContactItem(ui.facebook_label || "Facebook", links.facebook, "icon-facebook"));
+  }
+};
+
 const renderLinks = (links, ui) => {
   const github = byId("contact-github");
-  github.href = links.github;
+  setOptionalLink(github, links.github);
   github.querySelector(".link-text").textContent = ui.github_label || "GitHub";
 
   const linkedin = byId("contact-linkedin");
-  linkedin.href = links.linkedin;
+  setOptionalLink(linkedin, links.linkedin);
   linkedin.querySelector(".link-text").textContent = ui.linkedin_label || "LinkedIn";
+
+  const facebook = byId("contact-facebook");
+  setOptionalLink(facebook, links.facebook);
+  facebook.querySelector(".link-text").textContent = ui.facebook_label || "Facebook";
 
   const resume = byId("contact-resume");
   resume.href = "#";
@@ -137,8 +207,48 @@ const renderLinks = (links, ui) => {
   };
 
   const email = byId("contact-email");
-  email.href = `mailto:${links.email}`;
+  setOptionalLink(email, links.email ? `mailto:${links.email}` : "");
   email.querySelector(".link-text").textContent = links.email;
+
+  renderContactList(links, ui);
+};
+
+const getInitials = (name) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part.charAt(0))
+    .join("")
+    .toUpperCase();
+
+const renderAvatar = (imageUrl, name) => {
+  const avatar = byId("nav-avatar");
+  const initials = getInitials(name);
+
+  avatar.innerHTML = "";
+  avatar.textContent = initials;
+  avatar.classList.remove("has-image");
+
+  if (!imageUrl) {
+    return;
+  }
+
+  const image = document.createElement("img");
+  image.src = imageUrl;
+  image.alt = name;
+  image.loading = "eager";
+  image.decoding = "async";
+  image.onload = () => {
+    avatar.innerHTML = "";
+    avatar.appendChild(image);
+    avatar.classList.add("has-image");
+  };
+  image.onerror = () => {
+    avatar.innerHTML = "";
+    avatar.textContent = initials;
+    avatar.classList.remove("has-image");
+  };
 };
 
 const renderLanguageButtons = (activeLocale) => {
@@ -245,13 +355,26 @@ const setLocale = (allData, locale) => {
   byId("intro-summary").textContent = localeData.summary;
   const metaParts = [localeData.location, localeData.experience_years].filter(Boolean);
   byId("intro-meta").textContent = metaParts.join(" · ");
+  byId("nav-name").textContent = localeData.name;
+  renderAvatar(allData.profile_image, localeData.name);
 
   byId("skills-title").textContent = ui.skills_title || "Skills";
+  byId("side-projects-title").textContent = ui.side_projects_title || "Side Projects";
   byId("experience-title").textContent = ui.experience_title || "Experience";
   byId("education-title").textContent = ui.education_title || "Education";
   byId("languages-title").textContent = ui.languages_title || "Languages";
+  byId("contact-title").textContent = ui.contact_title || "Contact";
+  byId("contact-note").textContent = ui.contact_note || "";
+  byId("nav-about").textContent = ui.about_title || "About";
+  byId("nav-experience").textContent = ui.experience_nav || ui.experience_title || "Experience";
+  byId("nav-education").textContent = ui.education_title || "Education";
+  byId("nav-skills").textContent = ui.skills_title || "Skills";
+  byId("nav-side-projects").textContent = ui.side_projects_title || "Side Projects";
+  byId("nav-languages").textContent = ui.languages_title || "Languages";
+  byId("nav-contact").textContent = ui.contact_title || "Contact";
 
   renderSkills(byId("skills-container"), localeData.skills);
+  renderSideProjects(byId("side-projects-container"), localeData.side_projects);
   renderExperience(byId("experience-container"), localeData.experience);
   renderEducation(byId("education-container"), localeData.education);
   renderLanguages(byId("languages-container"), localeData.languages);
